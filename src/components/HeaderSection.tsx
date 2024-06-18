@@ -47,8 +47,8 @@ export default function HeaderSection() {
             Save search
 
 
-            Click me
-          </Button>
+
+              Click me
         </Stack>
       </Stack>
 
