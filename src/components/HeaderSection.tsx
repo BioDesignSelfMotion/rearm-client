@@ -13,7 +13,6 @@ export default function HeaderSection() {
   const handleClose = () => setOpen(false);
 
   return (
-    <div style={{ backgroundColor: 'lightblue', padding: '1rem' }}>
       <Stack
         direction={{
           xs: 'column',
