@@ -39,17 +39,15 @@ export default function HeaderSection() {
         </div>
 
         <Stack direction="row" spacing={1.5}>
-          <Button variant="outlined" color="neutral">
+
             Shared
-          </Button>
-          <Button
-            variant="solid"
-            color="primary"
-            startDecorator={<i data-feather="star" />}
+
+
+            aria-label="Save search"
           >
             Save search
-          </Button>
-          <Button variant="solid" color="primary" onClick={handleOpen}>
+
+
             Click me
           </Button>
         </Stack>
