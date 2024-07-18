@@ -34,13 +34,12 @@ export default function RentalDashboard() {
     }
   }, [status]);
 
-  const handleShowMap = () => {
-    setShowModal(true); // Open the modal when the button is clicked
-  };
-
-  const handleCloseModal = () => {
-    setShowModal(false); // Close the modal
-  };
+  const handleShowMap = React.useCallback(() => {
+    setShowModal(true);
+  }, []);
+  const handleCloseModal = React.useCallback(() => {
+    setShowModal(false);
+  }, []);
 
   return (
     <CssVarsProvider disableTransitionOnChange>
