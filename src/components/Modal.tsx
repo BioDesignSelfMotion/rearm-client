@@ -13,7 +13,7 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
-  if (!isOpen) {
+  if (isOpen) {
     return null
   }
 
