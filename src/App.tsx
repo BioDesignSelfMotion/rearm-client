@@ -23,7 +23,7 @@ const useEnhancedEffect =
 
 export default function RentalDashboard() {
   const status = useScript(`https://unpkg.com/feather-icons`);
-  const [showModal, setShowModal] = React.useState(false); // Add state for controlling the modal
+  const [showModal, setShowModal] = React.useState(false); // State to toggle visibility of the modal
 
   useEnhancedEffect(() => {
     // Feather icon setup: https://github.com/feathericons/feather#4-replace
