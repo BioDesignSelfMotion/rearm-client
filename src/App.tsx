@@ -16,12 +16,14 @@ import Search from './components/Search';
 import Filters from './components/Filters';
 import Toggles from './components/Toggles';
 import Pagination from './components/Pagination';
+import Modal from './components/Modal'; // Import the Modal component
 
 const useEnhancedEffect =
   typeof window !== 'undefined' ? React.useLayoutEffect : React.useEffect;
 
 export default function RentalDashboard() {
   const status = useScript(`https://unpkg.com/feather-icons`);
+  const [showModal, setShowModal] = React.useState(false); // State to toggle visibility of the modal
 
   useEnhancedEffect(() => {
     // Feather icon setup: https://github.com/feathericons/feather#4-replace
@@ -31,6 +33,13 @@ export default function RentalDashboard() {
       feather.replace();
     }
   }, [status]);
+
+  const handleShowMap = React.useCallback(() => {
+    setShowModal(true);
+  }, []);
+  const handleCloseModal = React.useCallback(() => {
+    setShowModal(false);
+  }, []);
 
   return (
     <CssVarsProvider disableTransitionOnChange>
@@ -55,7 +64,6 @@ export default function RentalDashboard() {
             sx={{
               width: '100%',
               height: '100dvh',
-
               margin: 0,
             }}
           >
@@ -85,6 +93,10 @@ export default function RentalDashboard() {
                 />
                 <Filters />
                 <Search />
+                <Box>
+                <button onClick={handleShowMap}>Show Map</button> {/* Add the "Show Map" button */}
+                {showModal && <Modal isOpen={showModal} onClose={handleCloseModal} />} {/* Render the Modal component when showModal is true */}
+                </Box>
                 <Toggles />
                 <RentalCard
                   title="A Stylish Apt, 5 min walk to Queen Victoria Market"
@@ -115,6 +127,7 @@ export default function RentalDashboard() {
           </Grid>
         </Main>
       </Box>
+      
     </CssVarsProvider>
   );
 }
