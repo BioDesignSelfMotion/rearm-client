@@ -2,7 +2,8 @@ import * as React from 'react';
 import AspectRatio from '@mui/joy/AspectRatio';
 import Box from '@mui/joy/Box';
 import Card from '@mui/joy/Card';
-import Chip from '@mui/joy/Chip';
+//test point
+import Chippy from '@mui/joy/Chip';
 import IconButton from '@mui/joy/IconButton';
 import Link from '@mui/joy/Link';
 import Stack from '@mui/joy/Stack';
@@ -36,6 +37,7 @@ export default function RentalCard({
           sm: 2,
         },
         boxShadow: 'none',
+        backgroundColor: 'green',
         borderRadius: 'sm',
         '&:hover': { boxShadow: 'md', borderColor: 'neutral.outlinedHoverBorder' },
       }}

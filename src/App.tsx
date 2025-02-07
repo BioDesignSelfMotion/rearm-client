@@ -16,12 +16,14 @@ import Search from './components/Search';
 import Filters from './components/Filters';
 import Toggles from './components/Toggles';
 import Pagination from './components/Pagination';
+import Modal from './components/Modal'; // Import the Modal component
 
 const useEnhancedEffect =
   typeof window !== 'undefined' ? React.useLayoutEffect : React.useEffect;
 
 export default function RentalDashboard() {
   const status = useScript(`https://unpkg.com/feather-icons`);
+  const [isMapModalOpen, setIsMapModalOpen] = React.useState(false); // State to toggle visibility of the map modal
 
   useEnhancedEffect(() => {
     // Feather icon setup: https://github.com/feathericons/feather#4-replace
@@ -31,6 +33,13 @@ export default function RentalDashboard() {
       feather.replace();
     }
   }, [status]);
+
+  const handleShowMap = React.useCallback(() => {
+    setShowModal(true);
+  }, []);
+  const handleCloseModal = React.useCallback(() => {
+    setShowModal(false);
+  }, []);
 
   return (
     <CssVarsProvider disableTransitionOnChange>
@@ -55,7 +64,6 @@ export default function RentalDashboard() {
             sx={{
               width: '100%',
               height: '100dvh',
-
               margin: 0,
             }}
           >
@@ -85,28 +93,16 @@ export default function RentalDashboard() {
                 />
                 <Filters />
                 <Search />
+                <Box>
+                <button onClick={handleShowMap}>Show Map</button> {/* Add the "Show Map" button */}
+                {showModal && <Modal isOpen={showModal} onClose={handleCloseModal} />} {/* Render the Modal component when showModal is true */}
+                </Box>
                 <Toggles />
                 <RentalCard
                   title="A Stylish Apt, 5 min walk to Queen Victoria Market"
                   category="Entire apartment rental in Collingwood"
                   rareFind
                   image="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=400"
-                />
-                <RentalCard
-                  title="Designer NY style loft"
-                  category="Entire loft in central business district"
-                  liked
-                  image="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=400"
-                />
-                <RentalCard
-                  title="5 minute walk from University of Melbourne"
-                  category="Entire rental unit in Carlton"
-                  image="https://images.unsplash.com/photo-1537726235470-8504e3beef77?auto=format&fit=crop&w=400"
-                />
-                <RentalCard
-                  title="Magnificent apartment next to public transport"
-                  category="Entire apartment rental in Collingwood"
-                  image="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=400"
                 />
                 <Divider />
                 <Pagination />
@@ -115,6 +111,7 @@ export default function RentalDashboard() {
           </Grid>
         </Main>
       </Box>
+      
     </CssVarsProvider>
   );
 }
