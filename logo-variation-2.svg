@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Circular badge style with building silhouette -->
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer circle -->
+  <circle cx="100" cy="100" r="80" fill="url(#grad2)"/>
+  
+  <!-- Inner circle highlight -->
+  <circle cx="100" cy="100" r="75" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Building 1 -->
+  <rect x="60" y="85" width="20" height="45" fill="#ffffff" opacity="0.9" rx="2"/>
+  <rect x="63" y="90" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  <rect x="71" y="90" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  <rect x="63" y="98" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  <rect x="71" y="98" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  <rect x="63" y="106" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  <rect x="71" y="106" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  <rect x="63" y="114" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  <rect x="71" y="114" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  
+  <!-- Building 2 (taller) -->
+  <rect x="85" y="70" width="25" height="60" fill="#ffffff" opacity="0.95" rx="2"/>
+  <rect x="89" y="75" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  <rect x="97" y="75" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  <rect x="89" y="83" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  <rect x="97" y="83" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  <rect x="89" y="91" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  <rect x="97" y="91" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  <rect x="89" y="99" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  <rect x="97" y="99" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  <rect x="89" y="107" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  <rect x="97" y="107" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  
+  <!-- Building 3 -->
+  <rect x="115" y="90" width="22" height="40" fill="#ffffff" opacity="0.9" rx="2"/>
+  <rect x="119" y="95" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  <rect x="127" y="95" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  <rect x="119" y="103" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  <rect x="127" y="103" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  <rect x="119" y="111" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  <rect x="127" y="111" width="4" height="4" fill="#06b6d4" opacity="0.6"/>
+  
+  <!-- Ground line -->
+  <line x1="55" y1="130" x2="145" y2="130" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
+</svg>
