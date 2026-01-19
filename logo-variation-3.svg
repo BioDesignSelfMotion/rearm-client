@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Abstract geometric design with location pin and house -->
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3b" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Location pin shape -->
+  <path d="M 100 40 C 85 40 73 52 73 67 C 73 82 100 110 100 110 C 100 110 127 82 127 67 C 127 52 115 40 100 40 Z" 
+        fill="url(#grad3)" opacity="0.95"/>
+  
+  <!-- Inner circle of pin -->
+  <circle cx="100" cy="67" r="12" fill="#ffffff" opacity="0.9"/>
+  
+  <!-- House icon inside pin -->
+  <path d="M 95 63 L 100 58 L 105 63 L 105 72 L 95 72 Z" fill="url(#grad3)" opacity="0.9"/>
+  <rect x="98" y="67" width="4" height="5" fill="#ffffff" opacity="0.6"/>
+  
+  <!-- Decorative circular elements -->
+  <circle cx="70" cy="120" r="25" fill="url(#grad3b)" opacity="0.2"/>
+  <circle cx="130" cy="140" r="30" fill="url(#grad3)" opacity="0.15"/>
+  
+  <!-- Modern geometric accent lines -->
+  <path d="M 50 150 L 80 130 L 85 155" stroke="url(#grad3b)" stroke-width="3" fill="none" 
+        stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+  <path d="M 150 160 L 120 145 L 115 165" stroke="url(#grad3)" stroke-width="3" fill="none" 
+        stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+  
+  <!-- Bottom text area representation (abstract) -->
+  <rect x="60" y="140" width="80" height="4" rx="2" fill="url(#grad3b)" opacity="0.3"/>
+  <rect x="70" y="150" width="60" height="3" rx="1.5" fill="url(#grad3)" opacity="0.25"/>
+</svg>
